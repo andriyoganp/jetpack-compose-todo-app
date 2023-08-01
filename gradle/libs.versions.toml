@@ -10,6 +10,7 @@ espresso-core = "3.5.1"
 hilt-android = "2.44"
 jetbrains-kotlin-android = "1.8.10"
 junit = "4.13.2"
+kotlinx-coroutines-core = "1.6.4"
 lifecycle-runtime-ktx = "2.6.1"
 material3 = "1.1.1"
 room-compiler = "2.5.2"
@@ -37,6 +38,7 @@ androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
 junit = { module = "junit:junit", version.ref = "junit" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
