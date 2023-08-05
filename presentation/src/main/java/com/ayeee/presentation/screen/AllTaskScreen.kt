@@ -89,14 +89,16 @@ private fun AllTaskScreenContent(
                 ),
                 color = MaterialTheme.colorScheme.onPrimary
             )
-            IconButton(
-                onClick = { confirmationDialog = true }, modifier = Modifier
-                    .padding(horizontal = 24.dp),
-                colors = IconButtonDefaults.iconButtonColors(
-                    contentColor = MaterialTheme.colorScheme.onPrimary
-                )
-            ) {
-                Icon(Icons.Filled.Delete, "")
+            if (allTaskUiState is AllTaskUiState.Success && allTaskUiState.tasks.isNotEmpty()) {
+                IconButton(
+                    onClick = { confirmationDialog = true }, modifier = Modifier
+                        .padding(horizontal = 24.dp),
+                    colors = IconButtonDefaults.iconButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                ) {
+                    Icon(Icons.Filled.Delete, "")
+                }
             }
         }
         Spacer(Modifier.height(16.dp))
