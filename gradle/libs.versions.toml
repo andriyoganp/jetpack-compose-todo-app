@@ -7,12 +7,15 @@ compose = "1.4.3"
 core-ktx = "1.10.1"
 dagger-hilt = "2.44"
 espresso-core = "3.5.1"
-hilt-android = "2.44"
+gson = "2.10.1"
+hilt-android = "2.47"
+hilt-navigation-compose = "1.0.0"
 jetbrains-kotlin-android = "1.8.10"
 junit = "4.13.2"
-kotlinx-coroutines-core = "1.6.4"
-lifecycle-runtime-ktx = "2.6.1"
+kotlinx-coroutines-core = "1.7.1"
+lifecycle = "2.6.1"
 material3 = "1.1.1"
+navigation-compose = "2.6.0"
 room-compiler = "2.5.2"
 room-ktx = "2.5.2"
 room-runtime = "2.5.2"
@@ -22,9 +25,12 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
-androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-compiler" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room-ktx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-runtime" }
@@ -35,6 +41,7 @@ androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", v
 androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "compose" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android" }
 junit = { module = "junit:junit", version.ref = "junit" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android" }
