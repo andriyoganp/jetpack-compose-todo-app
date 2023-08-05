@@ -15,6 +15,8 @@ data class TaskEntity(
     val type: TaskType,
     @ColumnInfo("created_at")
     val createdAt: Long = Calendar.getInstance().timeInMillis,
+    @ColumnInfo("updated_at")
+    val updatedAt: Long = Calendar.getInstance().timeInMillis,
     @ColumnInfo("due_date")
     val dueDate: Long? = null,
 ) {
@@ -24,6 +26,7 @@ data class TaskEntity(
         description = description,
         type = type.value,
         createdAt = createdAt,
+        updatedAt = updatedAt,
         dueDate = dueDate ?: 0L
     )
 }

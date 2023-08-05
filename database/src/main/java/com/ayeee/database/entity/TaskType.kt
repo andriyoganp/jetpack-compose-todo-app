@@ -5,20 +5,19 @@ enum class TaskType(
 ) {
     PERSONAL(value = "Personal"),
     WORK(value = "Work"),
-    OTHER(value = "Other"),
-    UNKNOWN(value = "Unknown");
+    OTHER(value = "Other");
 
     companion object {
         fun fromString(value: String): TaskType {
             return TaskType::class.java.enumConstants?.firstOrNull {
                 it.value == value
-            } ?: UNKNOWN
+            } ?: OTHER
         }
     }
 }
 
 fun String?.asTaskType() = when (this) {
-    null -> TaskType.UNKNOWN
+    null -> TaskType.OTHER
     else -> TaskType.values()
-        .firstOrNull { type -> type.value == this } ?: TaskType.UNKNOWN
+        .firstOrNull { type -> type.value == this } ?: TaskType.OTHER
 }
