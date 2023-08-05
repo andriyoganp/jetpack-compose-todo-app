@@ -4,6 +4,10 @@ import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavDestination
@@ -11,6 +15,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import com.ayeee.presentation.navigation.homeRoute
 import com.ayeee.todolist.R
 import com.ayeee.todolist.navigation.ToDoListNavHost
+import com.ayeee.todolist.screen.SplashScreen
 import com.ayeee.ui.theme.ToDoListTheme
 import kotlinx.coroutines.delay
 
@@ -18,6 +23,15 @@ import kotlinx.coroutines.delay
 fun ToDoListApp(appState: ToDoListAppState = rememberToDoListAppState()) {
     // when press button hardware or slide gesture
     val context = LocalContext.current
+
+    var splash by remember { mutableStateOf(false) }
+
+    LaunchedEffect(Unit) {
+        splash = true
+        delay(2000)
+        splash = false
+    }
+
     LaunchedEffect(key1 = appState.overrideBackPressed) {
         if (!appState.overrideBackPressed) {
             delay(2000)
@@ -33,7 +47,11 @@ fun ToDoListApp(appState: ToDoListAppState = rememberToDoListAppState()) {
         }
     }
     ToDoListTheme {
-        ToDoListNavHost(appState.navController)
+        if (splash) {
+            SplashScreen()
+        } else {
+            ToDoListNavHost(appState.navController)
+        }
     }
 }
 
