@@ -8,6 +8,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
+import com.ayeee.presentation.navigation.homeRoute
 import com.ayeee.todolist.R
 import com.ayeee.todolist.navigation.ToDoListNavHost
 import com.ayeee.ui.theme.ToDoListTheme
@@ -25,7 +26,7 @@ fun ToDoListApp(appState: ToDoListAppState = rememberToDoListAppState()) {
     }
 
     // Only show on overview or all task list screen
-    if (appState.currentDestination.isTopLevelDestinationInHierarchy("")) {
+    if (appState.currentDestination.isTopLevelDestinationInHierarchy(homeRoute)) {
         BackHandler(appState.overrideBackPressed) {
             appState.overrideBackPressed = false
             Toast.makeText(context, R.string.press_again_to_exit, Toast.LENGTH_SHORT).show()
