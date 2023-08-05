@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias libs.plugins.android.library
+    alias libs.plugins.jetbrains.kotlin.android
     alias libs.plugins.dagger.hilt
-    id 'com.google.devtools.ksp'
+    alias libs.plugins.jetbrains.kotlin.kapt
 }
 
 android {
@@ -38,5 +38,5 @@ dependencies {
     implementation libs.kotlinx.coroutines.core
 
     implementation libs.hilt.android
-    ksp libs.hilt.android.compiler
+    kapt libs.hilt.android.compiler
 }
