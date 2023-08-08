@@ -1,4 +1,4 @@
-package com.ayeee.database.converters
+package com.ayeee.database.converter
 
 import androidx.room.TypeConverter
 import com.ayeee.database.entity.TaskType
